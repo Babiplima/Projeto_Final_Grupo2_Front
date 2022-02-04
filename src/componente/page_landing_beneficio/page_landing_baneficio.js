@@ -18,6 +18,26 @@ export default class page_landing_beneficio extends Component{
           link: this.link,
           NivelZupper: this.NivelZupper,
         };
+        const requestInfo = {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: new Headers({
+              "Content-Type": "application/json",
+            }),
+          };
+          fetch(url, requestInfo)
+            .then((response) => {
+              if (response.ok) {
+                return response;
+              }
+            })
+            .catch( e => {
+              console.log("Este benefício não existe")
+          });
+        };
+      
+        render() {
+          return (
         
 }
 }
