@@ -38,6 +38,38 @@ export default class page_landing_beneficio extends Component{
       
         render() {
           return (
+
+            <div>
+            <Header title="Cadastro de Beneficio" />
+            <hr></hr>
+            <Form>
+              <FormGroup>
+                <Label for="Nome">Nome</Label>
+                <Input
+                  type="text"
+                  id="nome"
+                  placeholder="Informe a seu nome:"
+                  onChange={(e) => (this.nome = e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="descricao">descricao</Label>
+                <Input type="text" id="descricao" placeholder="Descrição:" onChange={(e) => (this.descricao = e.target.value)} />
+              </FormGroup>
+              <FormGroup>
+                <Label for="link">link</Label>
+                <Input type="text" id="link" placeholder="Link:" onChange={(e) => (this.link = e.target.value)} />
+              </FormGroup>
+              <FormGroup>
+                <Label for="NivelZupper">NivelZupper</Label>
+                <Input type="text" id="NivelZupper" placeholder="NivelZupper:" onChange={(e) => (this.NivelZupper = e.target.value)} />
+              </FormGroup>
+              <Button color="primary" block onClick={this.cadastrarBeneficio}>
+                Cadastrar
+              </Button>
+            </Form>
+          </div>
         
+          );
 }
 }
