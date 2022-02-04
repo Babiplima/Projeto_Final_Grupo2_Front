@@ -9,4 +9,15 @@ export default class page_landing_beneficio extends Component{
             message: this.props.state ? this.props.state.message :"",
         };
     }
+
+    cadastrarBeneficio= () => {
+        const url = "http://localhost:8080/beneficio";
+        const data = {
+          nome: this.nome,
+          descricao: this.descricao,
+          link: this.link,
+          NivelZupper: this.NivelZupper,
+        };
+        
+}
 }
