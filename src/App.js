@@ -1,13 +1,13 @@
-import react, {Component} from "react";
-import "./App.css"
-import Routes from "./route";
+import React from "react";
+import Beneficio from "./componente/Beneficio/index"
+import './App.css'
 
-export default class App extends Component{
-    render(){
-          return(
-            <div className="App"> 
-               <Routes/>
-            </div>
+function App() {
+    return(
+    <div className="App">   
+      <Beneficio/>
+       </div>
           );
         }
-    }
+    
+    export default App

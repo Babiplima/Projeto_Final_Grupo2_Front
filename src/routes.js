@@ -1,6 +1,6 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import PrivateRoute from './auth';
-import page_landing_beneficio from './componente/page_landing_beneficio/index'
+import page_landing_beneficio from './componente/Beneficio/page_landing_beneficio/index';
 
 
 const Routes = () => (

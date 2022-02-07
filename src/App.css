@@ -1,20 +1,33 @@
+
+html {
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+body{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .App{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 300px;
-    padding: 20px;
-  
-    background-color: rgb(155, 189, 33);
-    opacity: 0.9;
-    border-radius: 50px;
-    
-    
-  }
-  
-  body{
-    background-image: url(0-5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  
-  }
+  background-color: #06a1b6;
+  opacity: 0.7;
+  border-radius: 50px;
+  color: black;
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+header{
+  margin-bottom: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
