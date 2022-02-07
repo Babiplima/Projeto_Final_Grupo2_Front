@@ -1,14 +1,14 @@
-import React from "react";
-import Login from "./componente/Usuario/login";
-import './App.css'
+import React, {Component} from "react";
+import "./App.css"
+import CadastrarUsuario from "./componente/Usuario/CadastrarUsuario";
 
 
-function App() {
- return(
-    <div className="App">
-        <Login/>
-    </div>
- );
+export default class App extends Component {
+    render(){
+        return(
+           <div className="App">
+             <CadastrarUsuario/>
+           </div>
+        );
+    }
 }
-
-export default App;
