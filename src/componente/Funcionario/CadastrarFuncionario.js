@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Form, FormGroup, Label, Input, Button, Alert} from "reactstrap"
 import Header from "../Header/Header";
 
-export default class CadastrarFuncionario extends Component{
+export default class CadastrarFuncionario extends Componentfe{
     constructor(props) {
         super(props)
         this.state = {
