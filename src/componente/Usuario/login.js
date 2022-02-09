@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Form, FormGroup, Input, Button, Alert} from 'reactstrap';
-import Header from '../Header/header';
+import Header from '../Header/Header';
 
 
 
