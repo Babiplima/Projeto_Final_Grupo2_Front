@@ -1,0 +1,10 @@
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 300px;
+    padding: 20px;
+    width: 600px;
+
+    font-family: 'Times New Roman', Times, serif; 
+}

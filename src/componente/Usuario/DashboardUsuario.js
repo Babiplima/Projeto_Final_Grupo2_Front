@@ -9,7 +9,8 @@ import {
   FormGroup,
   Label,
   Input,
-  Alert
+  Alert,
+  Row
 } from "reactstrap";
 
 class ListUsuario extends Component {
@@ -164,7 +165,7 @@ class AtualizarUsuario extends Component {
       .then((response) => response.json())
       .then((newUsuario) => {
         let { usuarios } = this.state;
-        leads.push(newUsuario);
+        usuarios.push(newUsuario);
         this.setState({
           usuarios,
           message: { text: "Senha atualizada com sucesso. ", alert: "success" },
@@ -191,7 +192,7 @@ class AtualizarUsuario extends Component {
     };
     fetch(`${this.url}/${email}`, requestInfo)
       .then((rows) => {
-        const usuarios = this.state.usuarios.filter((lead) => usuario.email !== email);
+        const usuarios = this.state.usuarios.filter((usuario) => usuario.email !== email);
         this.setState({
           usuarios,
           message: { text: "Usuario deletado com sucesso. ", alert: "danger" },
