@@ -1,12 +1,16 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import PrivateRoute from './auth';
-import page_landing_beneficio from './componente/Beneficio/page_landing_beneficio/index';
+import beneficio from './componente/Beneficio/beneficio';
+import atividade from './componente/Atividade/atividade';
+import dashboardBeneficio from './componente/Beneficio/dashboardBeneficio';
 
 
 const Routes = () => (
     <Router>
         <Switch>
-            <Route exact path='/page_landing_beneficio' component={page_landing_beneficio}/>
+            <Route exact path='/beneficio' component={beneficio}/>
+            <PrivateRoute path='/dashboardBeneficio' component={dashboardBeneficio}/>
+            <Route exact path='/atividade' component={atividade}/>
         </Switch>
     </Router>
 

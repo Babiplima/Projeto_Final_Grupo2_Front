@@ -1,13 +1,15 @@
-import React from "react";
-import Beneficio from "./componente/Beneficio/index"
+import  {Component} from "react";
+import Routes from "./routes";
 import './App.css'
 
-function App() {
-    return(
-    <div className="App">   
-      <Beneficio/>
-       </div>
-          );
-        }
-    
-    export default App
+class App extends Component {
+  render(){
+      return(
+          <div className="App">
+              <Routes/>
+          </div>
+      );
+  }
+}
+
+export default App
