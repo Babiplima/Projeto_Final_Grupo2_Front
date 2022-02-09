@@ -1,8 +1,43 @@
-import React from "react";
+import React, {Component} from "react";
 import {Form, FormGroup, Label, Input, Button, Alert} from "reactstrap"
 import Header from "../Header/Header";
 
-export default class CadastrarFuncionario extends Comment{
+export default class CadastrarFuncionario extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            message : this.props.state ? this.props.state.message: '',
+        };
+    }
+
+    signIn = () => {
+        const url = "http://localhost:8080/funcionario";
+        const data = {
+            nomeDeFuncionario: this.nomeDeFuncionario,
+            email: this.email,
+            nivelZupper: this.nivelZupper,
+            dataDeContratacao: this.dataDeContratacao
+        };
+        let token = localStorage.getItem("token");
+        const requestInfo = {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: new Headers({
+                "Content-type": "application/json",
+                Authorization: token,
+              }),
+        };
+        fetch(url, requestInfo)
+        .then( response => {
+            console.log("Cadastrado com sucesso")
+            this.setState({message: "O cadastro foi efetuado com sucesso"})
+            return response
+        }).catch( e => {
+            console.log("Usuário inválido")
+        }
+        );
+    }
+
     render() {
         return(
             <div>
