@@ -1,6 +1,6 @@
 import React,{Component}from"react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import Header from "../Header/Header";
+import { Form, FormGroup, Label, Input, Button, Alert } from "reactstrap";
+import Header from "../Header/header";
 
 export default class index extends Component{
     constructor(props){
@@ -13,7 +13,7 @@ export default class index extends Component{
     }
 
     cadastrarAtividade= (atividade) => {
-        const url = "http://localhost:8080/atividade";
+        const url = "http://localhost:8080/atividadefisica";
         const data = {
           nome: this.nome,
           cidade: this.cidade,
@@ -44,7 +44,7 @@ export default class index extends Component{
               this.setState({message: e.message});   
             });
           };
-      
+
         render() {
           return (
 
@@ -68,12 +68,12 @@ export default class index extends Component{
                 <Input type="text" id="nome" placeholder="Informe o seu nome:" onChange={(e) => (this.nome = e.target.value)}/>
               </FormGroup>
               <FormGroup>
-                <Label for="Cidade">Descrição</Label>
-                <Input type="text" id="cidade" placeholder="Cidade:" onChange={(e) => (this.cidade= e.target.value)} />
+                <Label for="Cidade">Cidade</Label>
+                <Input type="text" id="cidade" placeholder="Informe a Cidade:" onChange={(e) => (this.cidade= e.target.value)} />
               </FormGroup>
               <FormGroup>
-                <Label for="Bairro">Link</Label>
-                <Input type="text" id="bairro" placeholder="Bairro:" onChange={(e) => (this.bairro = e.target.value)} />
+                <Label for="Bairro">Bairro</Label>
+                <Input type="text" id="bairro" placeholder="Informe seu Bairro:" onChange={(e) => (this.bairro = e.target.value)} />
               </FormGroup>
               <FormGroup>
                 <Label for="Horario">Horario</Label>
@@ -84,7 +84,7 @@ export default class index extends Component{
                 <Input type="text" id="Data" placeholder="Data:" onChange={(e) => (this.data = e.target.value)} />
               </FormGroup>
               <FormGroup>
-                <Label for="Enedereço">Enedereço</Label>
+                <Label for="Endereço">Endereço</Label>
                 <Input type="text" id="Endereço" placeholder="Endereço:" onChange={(e) => (this.endereco = e.target.value)} />
               </FormGroup>
               <FormGroup>
@@ -100,7 +100,7 @@ export default class index extends Component{
               </Button>
             </Form>
           </div>
-        
+
           );
 }
 }

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 
 const isAuth = () => {
@@ -18,7 +18,7 @@ const PrivateRoute = ({component:Component, ...rest})=>{
             isAuth()?(
                 <Component{...props}/>
             ): (
-                <Navigate
+                <Redirect
                 to={{
                     pathname: '/',
                     state:{message:'Usuário não autorizado'}

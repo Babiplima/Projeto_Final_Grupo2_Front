@@ -1,0 +1,42 @@
+import React, { Component } from "react";
+
+import {
+  Table,
+  Form,
+  FormGroup,
+  Label,
+  Row
+  } from "reactstrap";
+
+     class DashboardListBeneficio extends Component {
+    url = "http://localhost:8080/beneficio";
+  
+    state = {
+     beneficios: [],
+      message: {
+        text: "",
+        alert: "",
+      },
+    };
+  
+    componentDidMount() {
+      let token = localStorage.getItem("token");
+      const requestInfo = {
+        method: "GET",
+        headers: new Headers({
+          "Content-type": "application/json",
+          Authorization: token,
+        }),
+      };
+      fetch(this.url, requestInfo)
+        .then((response) => response.json())
+        .then((atividades) => this.setState({ beneficios}))
+        .catch((e) => console.log(e));
+    }
+       setState(arg0: { beneficios: any; }): any {
+         throw new Error("Method not implemented.");
+       }
+  
+}
+
+export default DashboardListBeneficio;
