@@ -36,16 +36,16 @@ class ListFuncionario extends Component {
         </thead>
         <tbody>
           {funcionarios.map((funcionario) => (
-            <tr key={funcionario.email}>
+            <tr>
               <td>{funcionario.nomeDeFuncionario}</td>
-              <td>{funcionario.email}</td>
+              <td>{funcionario.usuario.email}</td>
               <td>{funcionario.nivelZupper}</td>
               <td>{funcionario.dataDeContratacao}</td>
               <td>
                 <Button
                   color="danger"
                   size="sm"
-                  onClick={(e) => this.delete(funcionario.email)}
+                  onClick={(e) => this.delete(funcionario.usuario.email)}
                 >
                   Deletar
                 </Button>

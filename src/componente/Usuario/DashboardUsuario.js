@@ -33,7 +33,7 @@ class ListUsuario extends Component {
         </thead>
         <tbody>
           {usuarios.map((usuario) => (
-            <tr key={usuario.email}>
+            <tr>
               <td>{usuario.email}</td>
               <td>
                 <Button
@@ -119,7 +119,7 @@ class FormUsuario extends Component {
   }
 }
 
-class AtualizarUsuario extends Component {
+class DashboardUsuario extends Component {
   url = "http://localhost:8080/usuario";
 
   state = {
@@ -215,7 +215,7 @@ class AtualizarUsuario extends Component {
         <div className="row">
           <div className="col-md-6 my-3">
             <h2 className="font-weight-bold text-center">Atualizar senha de usuario</h2>
-            <FormUsuario UsuarioCreate={this.save} />
+            <FormUsuario usuarioCreate={this.save} />
           </div>
           <div className="col-md-6 my-3">
             <h2 className="font-weight-bold text-center">Lista de Usuarios </h2>
@@ -227,4 +227,4 @@ class AtualizarUsuario extends Component {
   }
 }
 
-export default AtualizarUsuario;
+export default DashboardUsuario;
