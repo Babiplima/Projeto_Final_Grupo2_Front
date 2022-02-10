@@ -34,6 +34,7 @@ export default class Login extends Component {
             throw new Error("Email ou senha inválido")
         }).then(token => {
             localStorage.setItem('token', token);
+            this.props.history.push("/dashboardUsuario");
         }).catch( e => {
             this.setState({message: e.message})
             console.log(this.email, this.password)
