@@ -42,6 +42,13 @@ class ListFuncionario extends Component {
               <td>{funcionario.nivelZupper}</td>
               <td>{funcionario.dataDeContratacao}</td>
               <td>
+              <Button
+                  color="info"
+                  size="sm"
+                  onClick={(e) => this.onEdit(funcionario)}
+                >
+                  Editar
+                </Button>
                 <Button
                   color="danger"
                   size="sm"
@@ -92,18 +99,6 @@ class ListFuncionario extends Component {
     render() {
       return (
         <Form>
-          <FormGroup>
-            <div className="form-row">
-              <Label for="email"> Email </Label>
-              <Input
-                id="email"
-                type="text"
-                value={this.state.model.email}
-                placeholder="Informe o email do zupper"
-                onChange={(e) => this.setValues(e, "email")}
-              />
-            </div>
-          </FormGroup>
           <FormGroup>
             <div className="form-row">
               <Label for="nivelZupper">Nível zupper</Label>
