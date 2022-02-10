@@ -1,14 +1,14 @@
 import React, {Component} from "react";
 import "./App.css"
-import DashboardFuncionario from "./componente/Funcionario/DashboardFuncionario";
-import DashboardUsuario from "./componente/Usuario/DashboardUsuario";
+import CadastrarUsuario from "./componente/Usuario/CadastrarUsuario";
+
 
 
 export default class App extends Component {
     render(){
         return(
            <div className="App">
-               <DashboardFuncionario/>
+               <CadastrarUsuario/>
            </div>
         );
     }
