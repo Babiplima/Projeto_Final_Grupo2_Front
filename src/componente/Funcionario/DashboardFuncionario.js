@@ -148,7 +148,7 @@ class ListFuncionario extends Component {
     save = (funcionario) => {
         let data = {
           nomeDeFuncionario: funcionario.nomeDeFuncionario,
-          email: funcionario.email,
+          email: funcionario.usuario.email,
           nivelZupper: funcionario.nivelZupper,
           dataDeContratacao: funcionario.dataDeContratacao,
         };

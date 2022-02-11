@@ -16,7 +16,7 @@ export default class CadastrarFuncionario extends Component{
             nomeDeFuncionario: this.nomeDeFuncionario,
             email: this.email,
             nivelZupper: this.nivelZupper,
-            dataDeContratacao: this.dataDeContratacao
+            dataDeContratacao: this.dataDeContratacao,
         };
         let token = localStorage.getItem("token");
         const requestInfo = {
@@ -59,11 +59,11 @@ export default class CadastrarFuncionario extends Component{
                   </FormGroup>
                   <FormGroup>
                       <Label for = "nivelZupper"> Nível Zupper </Label>
-                      <Input type = "text" id = "nivelZupper" onChange={e => this.email = e.target.value} placeholder="Informe Nível Zupper do funcionario: "/>
+                      <Input type = "text" id = "nivelZupper" onChange={e => this.nivelZupper = e.target.value} placeholder="Informe Nível Zupper do funcionario: "/>
                   </FormGroup>
                   <FormGroup>
                       <Label for = "dataDeContratacao"> Data De Contratação </Label>
-                      <Input type = "date" id = "dataDeContratacao" onChange={e => this.email = e.target.value} placeholder="Informe Nível Zupper do funcionario: "/>
+                      <Input type = "date" id = "dataDeContratacao" onChange={e => this.dataDeContratacao = e.target.value} placeholder="Informe data de contratação do funcionario: "/>
                   </FormGroup>
                   <Button color="primary" onClick={this.signIn}> Cadastrar </Button>
                </Form>  
