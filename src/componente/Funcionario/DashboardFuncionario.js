@@ -36,16 +36,23 @@ class ListFuncionario extends Component {
         </thead>
         <tbody>
           {funcionarios.map((funcionario) => (
-            <tr key={funcionario.email}>
+            <tr>
               <td>{funcionario.nomeDeFuncionario}</td>
-              <td>{funcionario.email}</td>
+              <td>{funcionario.usuario.email}</td>
               <td>{funcionario.nivelZupper}</td>
               <td>{funcionario.dataDeContratacao}</td>
               <td>
+              <Button
+                  color="info"
+                  size="sm"
+                  onClick={(e) => this.onEdit(funcionario)}
+                >
+                  Editar
+                </Button>
                 <Button
                   color="danger"
                   size="sm"
-                  onClick={(e) => this.delete(funcionario.email)}
+                  onClick={(e) => this.delete(funcionario.usuario.email)}
                 >
                   Deletar
                 </Button>
@@ -92,18 +99,6 @@ class ListFuncionario extends Component {
     render() {
       return (
         <Form>
-          <FormGroup>
-            <div className="form-row">
-              <Label for="email"> Email </Label>
-              <Input
-                id="email"
-                type="text"
-                value={this.state.model.email}
-                placeholder="Informe o email do zupper"
-                onChange={(e) => this.setValues(e, "email")}
-              />
-            </div>
-          </FormGroup>
           <FormGroup>
             <div className="form-row">
               <Label for="nivelZupper">Nível zupper</Label>
@@ -153,7 +148,7 @@ class ListFuncionario extends Component {
     save = (funcionario) => {
         let data = {
           nomeDeFuncionario: funcionario.nomeDeFuncionario,
-          email: funcionario.email,
+          email: funcionario.usuario.email,
           nivelZupper: funcionario.nivelZupper,
           dataDeContratacao: funcionario.dataDeContratacao,
         };

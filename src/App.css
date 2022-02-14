@@ -1,10 +1,20 @@
 .App{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 300px;
-    padding: 20px;
-    width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 300px;
+  padding: 50px;
+  width: 700px;
 
-    font-family: 'Times New Roman', Times, serif; 
+  font-family: monospace; 
+  color: rgba(255, 255, 255, 0.842);
+  font-size: 17px;
+  border-radius: 10%;
+
+  background-color: #40ba8de3;
+
+}
+
+body{
+  background-image: url(https://media-exp1.licdn.com/dms/image/C4E0BAQE-oVfUEhBJrQ/company-logo_200_200/0/1628702667105?e=2159024400&v=beta&t=3xYegURdi_fkUfQZW1sT4U53TcYq6OwbvIuw_XWFLgE);
 }
