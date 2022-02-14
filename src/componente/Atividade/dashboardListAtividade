@@ -1,14 +1,5 @@
 import React, { Component } from "react";
 
-
-import {
-  Table,
-  Form,
-  FormGroup,
-  Label,
-  Row
-  } from "reactstrap";
-
   class DashboardListAtividade extends Component {
     url = "http://localhost:8080/atividade";
   
